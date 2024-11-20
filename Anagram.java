@@ -59,48 +59,13 @@ public class Anagram {
 	// as is. For example, the string "What? No way!" becomes "whatnoway"
 	public static String preProcess(String str) {
 		// Replace the following statement with your code
-<<<<<<< HEAD
-		str = str.toLowerCase();
-		char[] letters = {'a','b','c','d','e','f','g','h','i','j','k','l','m',
-						  'n','o','p','q','r','s','t','u','v','w','x','y','z'};
-		String newStr = "";
-		for (int i = 0; i < str.length(); i++){
-			//boolean isLetter = false;
-			for (char l : letters){
-				if (str.charAt(i) == l){
-					newStr += l;
-					break;
-				}
-			}
-
-		}
-		return newStr;
-=======
 		return "";
->>>>>>> upstream/main
 	} 
 	   
 	// Returns a random anagram of the given string. The random anagram consists of the same
 	// characters as the given string, re-arranged in a random order. 
 	public static String randomAnagram(String str) {
 		// Replace the following statement with your code
-<<<<<<< HEAD
-		//char[] letters = str.toCharArray();
-		char[] letters = new char[str.length()];
-		for (int i = 0; i < str.length(); i++){
-			letters[i] = str.charAt(i);
-		}
-		//System.out.println(letters);
-		for (int i = 0; i < letters.length; i++) {
-			int randomIndex = (int)(Math.random() * letters.length);
-			char temp = letters[i];
-			letters[i] = letters[randomIndex];
-			letters[randomIndex] = temp;
-		}
-		str = String.valueOf(letters);
-		return str;
-=======
 		return "";
->>>>>>> upstream/main
 	}
 }
