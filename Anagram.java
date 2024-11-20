@@ -9,7 +9,7 @@ public class Anagram {
 		System.out.println(isAnagram("Tom Marvolo Riddle","I am Lord Voldemort")); // true
 
 		// Tests the preProcess function.
-		System.out.println(preProcess("What? No way!!!"));
+		System.out.println(preProcess("Hello World!"));
 		
 		// Tests the randomAnagram function.
 		System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
@@ -37,7 +37,20 @@ public class Anagram {
 		// Replace the following statement with your code
 		str1 = preProcess(str1);
 		str2 = preProcess(str2);
-
+		String tempStr1 = "";
+		String tempStr2 = "";
+		for (int i = 0; i < str1.length(); i++){
+			if (str1.charAt(i) != ' '){
+				tempStr1 += str1.charAt(i);
+			}
+		}
+		for (int i = 0; i < str2.length(); i++){
+			if (str2.charAt(i) != ' '){
+				tempStr2 += str2.charAt(i);
+			}
+		}
+		str1 = tempStr1;
+		str2 = tempStr2;
 		if (str1.length() != str2.length()) return false;
 
 		while (str1 != ""){
@@ -61,7 +74,7 @@ public class Anagram {
 		// Replace the following statement with your code
 		str = str.toLowerCase();
 		char[] letters = {'a','b','c','d','e','f','g','h','i','j','k','l','m',
-						  'n','o','p','q','r','s','t','u','v','w','x','y','z'};
+						  'n','o','p','q','r','s','t','u','v','w','x','y','z',' '};
 		String newStr = "";
 		for (int i = 0; i < str.length(); i++){
 			//boolean isLetter = false;

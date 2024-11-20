@@ -1,7 +1,3 @@
-// Implements algebraic operations and the square root function without using 
-// the Java operations a + b, a - b, a * b, a / b, a % b, and without calling 
-// Math.sqrt. All the functions in this class operate on int values and
-// return int values.
 
 public class Algebra {
 	public static void main(String args[]) {
@@ -26,19 +22,18 @@ public class Algebra {
 		System.out.println(abs(5));
 		//System.out.println(times(-1,-7));
 		System.out.println(div(-7,-2));
+		System.out.println(abs(-5));
 	}  
 
 
 	public static int abs(int x){
 		int newX = x;
 		if (x < 0){
-			int i = 0;
-			
-			while (i > x * 2){
+			newX = 0;
+			int i = 0;			
+			while (i > x){
 				newX++;
 				i--;
-				
-				//System.out.println(x);
 			}
 		}
 		return newX;
@@ -125,22 +120,6 @@ public class Algebra {
 			}
 			return solution;
 		}
-		/*if ((x1 < 0 && x2 > 0) || (x1 > 0 && x2 < 0)){
-			while (x1 >= x2){
-				solution--;
-				x1 = minus(abs(x1), abs(x2));
-			}
-			return solution;
-		}
-			
-		if (x1 < 0 && x2 < 0){
-			while (x1 >= x2){
-				solution++;
-				x1 = minus(abs(x1), abs(x2));
-			}
-			return solution;
-		}
-			*/
 
 		return solution;
 	}
